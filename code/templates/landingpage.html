@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}CHATSQL - Natural Language to SQL{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Talk to Your Database Like Never Before</h1>
+    <p>CHATSQL transforms your natural language questions into SQL queries, executes them, and presents the results in an intuitive interface.</p>
+    
+    <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="window.location.href='{{ url_for('signup') }}'">Get Started</button>
+        <button class="btn btn-outline" onclick="window.location.href='#instructions'">How It Works</button>
+    </div>
+    
+    <div class="demo-video">
+        <div class="demo-placeholder">
+            <i class="fas fa-play-circle"></i>
+            Product Demo Video
+        </div>
+    </div>
+</section>
+
+<section id="features" class="section">
+    <h2 class="section-title">Powerful Features</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+            <h3 class="feature-title">Natural Language Processing</h3>
+            <p class="feature-desc">Ask questions in plain English and get accurate SQL queries in response.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-database"></i>
+            </div>
+            <h3 class="feature-title">Database Connection</h3>
+            <p class="feature-desc">Connect to your MySQL database and execute queries directly.</p>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-history"></i>
+            </div>
+            <h3 class="feature-title">Chat History</h3>
+            <p class="feature-desc">Save and revisit your previous conversations and queries.</p>
+        </div>
+    </div>
+</section>
+
+<section id="instructions" class="section instructions">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3 class="step-title">Connect Your Database</h3>
+                <p class="step-desc">Provide your database credentials to establish a connection.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3 class="step-title">Ask Questions Naturally</h3>
+                <p class="step-desc">Type your question about the data in plain English.</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3 class="step-title">Get Results</h3>
+                <p class="step-desc">View the generated SQL query and the results from your database.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="terms" class="section terms">
+    <h2 class="section-title">Terms & Agreement</h2>
+    <h3>Data Privacy</h3>
+    <p>We do not store your database credentials. All connections are established directly from your browser to your database.</p>
+    
+    <h3>Usage Policy</h3>
+    <p>This tool is provided as-is without warranty. Use responsibly and ensure you have proper backups.</p>
+    
+    <h3>API Usage</h3>
+    <p>You need to provide your own API key for the natural language processing service.</p>
+    
+    <div style="text-align: center; margin-top: 3rem;">
+        <button class="btn btn-primary" onclick="window.location.href='{{ url_for('signup') }}'">I Agree - Get Started</button>
+    </div>
+</section>
+{% endblock %}
