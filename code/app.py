@@ -16,7 +16,7 @@ app.secret_key = os.getenv('SECRET_KEY', 'your-secret-key-here')
 DB_CONFIG = {
     'host': os.getenv('DB_HOST', 'localhost'),
     'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', 'jaihanuman'),
+    'password': os.getenv('DB_PASSWORD', ''),
     'database': os.getenv('DB_NAME', 'chat_history_db')
 }
 
